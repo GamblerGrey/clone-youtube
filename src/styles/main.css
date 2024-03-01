@@ -1,0 +1,372 @@
+body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+header{
+    position: relative;
+    min-height: 4rem;
+    width: 100vw;
+    
+}
+
+
+header .menu{
+    width: 100vw;
+    height: 56px;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px 0 24px;
+}
+
+main {
+    margin-left: 3rem;
+    padding: 4rem;
+}
+
+.left {
+    padding-left: 10px ;
+    display: flex;
+    position: relative;
+    align-items: center;
+   
+}
+
+.left .logo  {
+    position: absolute;
+    max-height: 30px;
+    max-width: 100px;
+    margin-left: 2rem;
+    
+}
+
+input[type="checkbox"] {
+    display: none;
+    position: absolute;
+}
+
+label {
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label .bar {
+    width: 100%;
+    height: 2px;
+    background: #000;
+    border-radius: 50px;
+    transition-delay: .2s;
+}
+
+label .bar::before,
+label .bar::after{
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background: #000;
+    border-radius: 50px;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-duration: .3s;
+    transition-timing-function: linear;
+}
+
+label .bar::before{
+    animation-name: hamburger_top_bar_two;
+}
+
+label .bar::after{
+    animation-name: hamburger_bottom_bar_two;
+}
+
+@keyframes hamburger_top_bar_one
+{
+    0% {transform: translateY(-15px);}
+
+    25% {transform: translateY(0px);}
+
+    50% {transform: translateY(0px) rotate(0deg);}
+
+    100% {transform: translateY(0px) rotate(45deg);}
+}
+
+@keyframes hamburger_top_bar_two
+{
+    0% {transform: translateY(0px) rotate(45deg);}
+
+    25% {transform: translateY(0px) rotate(0deg);}
+
+    50% {transform: translateY(0px);}
+
+    100% {transform: translateY(-15px);}
+}
+
+@keyframes hamburger_bottom_bar_one
+{
+  0% { transform: translateY(15px); }
+
+  25% { transform: translateY(0px); }
+
+  50% { transform: translateY(0px) rotate(0deg); }
+
+  100% { transform: translateY(0px) rotate(-45deg); }
+}
+
+@keyframes hamburger_bottom_bar_two
+{
+  0% { transform: translateY(0px) rotate(-45deg); }
+
+  25% { transform: translateY(0px) rotate(0deg); }
+
+  50% { transform: translateY(0px); }
+
+  100% { transform: translateY(15px); }
+}
+
+#hamburger:checked + label .bar { 
+  background: transparent; 
+}
+
+#hamburger:checked + label .bar::before { 
+  animation-name: hamburger_top_bar_one; 
+}
+
+#hamburger:checked + label .bar::after { 
+  animation-name: hamburger_bottom_bar_one; 
+}
+
+.left img {
+    cursor: pointer;
+}
+
+.center {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ 
+}
+
+.center .busca {
+    position: relative;
+    width: 19rem;
+}
+
+.busca-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color .3s ease-in-out;
+}
+
+.busca-input:focus{
+    border-color: dodgerblue;
+}
+
+.busca .busca-button {
+    height: 37px;
+    width: 14%;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 10%;
+}
+
+.busca .busca-button img {
+   flex-basis: 20px;
+   padding: 5px;
+
+}
+
+.right{
+    margin-top: 10px;
+}
+
+.right svg {
+    cursor: pointer;
+}
+
+.right img {
+    cursor: pointer;
+}
+
+.right .avatar {
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+main {
+    height: auto;
+    width: auto;
+}
+
+.video{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 40rem;
+    width: 60rem;
+    top: 84px;
+    left: 75px;
+    gap:16px;
+}
+
+.video iframe {
+    display: flex;
+    flex-flow: column wrap;
+    position: absolute;
+    width: 952px;
+    height: 537px;
+}
+
+.window {
+    margin-top: 1rem;
+    margin-left: 4.5rem;
+    display: flex;
+    /* justify-content: flex-start;
+    align-items: flex-start; */
+    flex-flow: column;
+}
+
+.window .video-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.window p {
+    font-size: 14px;
+}
+
+.window .sub-title{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.window .content{
+    width: 33rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+}
+
+.video-actions{
+    width: 900px;
+    margin: 1rem  0 14px 0;
+    display: flex;
+    flex-flow: row ;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.video-actions p {
+    font-size: 14px;
+}
+
+.channel-infos{
+    width: auto;
+    height: 3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.channel-infos .infos p{
+    margin-bottom: 10px ;
+}
+
+.sub-button{
+    width: 159px;
+    height: 40px;
+    background: red;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 4%;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.window .video-actions #like {
+    width: 4rem;
+    height: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.window .video-actions #deslike {
+    width: 100px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    gap: 7px;
+}
+
+.window .video-actions #share {
+    width: 115px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.window .video-actions #download {
+    width: 115px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    font-weight: 600;
+    cursor: pointer;
+}
+ aside {
+    width: 16rem;
+    height: 100vh;
+    position: fixed;
+    right: 7rem;
+    top: 5rem;
+ }
+
+ .mini-video {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+ }
+
+ .mini-video .mini-video-title {
+    
+ }
+

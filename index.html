@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo Invertido com HTML e CSS</title>
+    <!-- main -->
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <!-- reset -->
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <!-- links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="left">
+                <input class="menu-i" type="checkbox" id="hamburger"/>
+                <label for="hamburger">
+                <div class="bar"></div>
+                </label>
+
+                <div class="logo">
+                    <img src="./src/assests/icons/youtube 1.png" alt=""/>
+                </div> 
+            </div>
+            <div class="center">
+                <div class="busca">
+                    <input type="text" class="busca-input">
+                    <button type="submit" class="busca-button"><img src="./src/assests/icons/search.svg" alt=""></button>
+                </div>
+            </div>
+            <div class="right">
+                <svg id="video" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23 7L16 12L23 17V7Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 5H3C1.89543 5 1 5.89543 1 7V17C1 18.1046 1.89543 19 3 19H14C15.1046 19 16 18.1046 16 17V7C16 5.89543 15.1046 5 14 5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                <img src="./src/assests/icons/bell.svg" alt=""> 
+                <button class="avatar"></button>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <main>
+        <div class="video">
+                <iframe src="https://www.youtube.com/embed/12WxZTpVnFE?si=Y3ol5nkm-fp-aQvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        <div class="window">
+            <h2 class="video-title">HTML 5 e CSS 3: O que você precisa saber antes do Framework</h2>
+            <div class="video-actions">
+                <div class="channel-infos">
+                    <img src="./src/assests/imagens/Channel Avatar.png" alt="Canal da dio">
+                    <div class="infos" >
+                        <p><strong>Dio</strong>
+                        <br> 83,3 mil inscritos</p>
+                    </div>
+                </div>
+                <div id="sub-button"><button class="sub-button">Inscreva-se</button></div>
+                <div id="like">
+                    <img src="./src/assests/icons/Vector (1).svg" alt="">
+                    <p>2 mil</p>
+                </div>
+                <div id="deslike">
+                    <img src="./src/assests/icons/Vector (2).svg" alt="">
+                    <p>Não Gostei</p>
+                </div>
+                <div id="share">
+                    <img src="./src/assests/icons/share-2.svg" alt="">
+                    <p>Compartilhar</p>
+                </div>
+                <div id="download">
+                    <img src="./src/assests/icons/download.svg" alt="">
+                    <p>Download</p>
+                </div>
+            </div>
+            <p class="sub-title">28.418 visualizações  Transmitido ao vivo em 23 ago. de 2022</p>
+            <p class="content">Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS. Para isso, criaremos uma landing page com a temática da série Stranger Things, a qual contará com a implementação de um theme switcher (light e dark) para explorarmos os mistérios do mundo invertido.</p>
+        </div>
+    </main>
+    <aside>
+        <div class="mini-video">
+            <img src="./src/assests/imagens/Thumb.png" alt="">
+            <div class="info">
+                <h3 class="mini-video-title"></h3>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="mini-video">
+            <img src="./src/assests/imagens/image 12.png" alt="">
+            <div class="info">
+                <h3 class="mini-video-title"></h3>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="mini-video">
+            <img src="./src/assests/imagens/image 13.png" alt="">
+            <div class="info">
+                <h3 class="mini-video-title"></h3>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="mini-video">
+            <img src="./src/assests/imagens/image 14.png" alt="">
+            <div class="info">
+                <h3 class="mini-video-title"></h3>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="mini-video">
+            <img src="./src/assests/imagens/image 15.png" alt="">
+            <div class="info">
+                <h3 class="mini-video-title"></h3>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="mini-video">
+            <img src="./src/assests/imagens/Thumb-1.png" alt="">
+            <div class="info">
+                <h3 class="mini-video-title"></h3>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="mini-video">
+            <img src="./src/assests/imagens/image 12-1.png" alt="">
+            <div class="info">
+                <h3 class="mini-video-title"></h3>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="mini-video">
+            <img src="./src/assests/imagens/image 13-1.png" alt="">
+            <div class="info">
+                <h3 class="mini-video-title"></h3>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="mini-video">
+            <img src="./src/assests/imagens/image 14-1.png" alt="">
+            <div class="info">
+                <h3 class="mini-video-title"></h3>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+    </aside>
+    
+    <script src="./src/scripts/engine.js"></script>
+</body>
+</html>
